@@ -15,3 +15,6 @@ console.log(typeof userAge);    // number
 console.log(typeof isLoggedIn); // boolean
 console.log(typeof email); // undefined cz typeof undefined is actually undefined and a variable is undefined until it is provided any value explicitly
 console.log(typeof userType); // object yes typeof 'null' in javascript is object
+
+
+// moreover we have a type 'symbol' which is used for uniqueness
