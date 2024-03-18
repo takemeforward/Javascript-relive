@@ -58,5 +58,28 @@ deepCopy[2][0] = 30
 let myArr = [1,2,3,4,5]
 let newArr = myArr
 newArr[2] = 20
-console.log(myArr)
-console.log(newArr)
+// console.log(myArr)
+// console.log(newArr)
+
+// ================== pushing and removing elements in array =======
+
+let myArray = [2,3,4,5]
+
+console.log(myArray)
+
+myArray.push(7, 7, 9)   // Array.push() is able to push single or multiple elements
+
+console.log(myArray);
+
+myArray.shift() // removes first elements or shifts all lements one place left
+console.log(myArray)
+
+myArray.unshift(0,-3)   // inserts number of elements from left of array
+console.log(myArray)
+
+console.log(myArray.includes(7))
+console.log(myArray.indexOf(7))
+
+//===============================
+
+
