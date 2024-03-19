@@ -100,4 +100,23 @@ const mergedObject = {...source1, ...source2}
 
 // check if a property is there in the object
 
-console.log(newUser.hasOwnProperty('name'))
+// console.log(newUser.hasOwnProperty('name'))
+
+//=============== De-structring of objects in javascript =========
+
+const course = {
+    courseName: "Mastering JavaScript",
+    coursePrice: "1999",
+    courseDuration: "64hours",
+    instructorName: "Vishal Jha",
+}
+
+// console.log(course.courseName)
+
+// destructing
+
+const {courseName, coursePrice, courseDuration, instructorName} = course
+
+const {log: print} = console
+
+print(courseName, coursePrice, instructorName)
