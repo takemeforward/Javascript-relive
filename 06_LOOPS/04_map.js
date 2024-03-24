@@ -16,5 +16,6 @@ OUTPUT
 ]
 */
 
-// may does operation on each elements of array and in the end it returns array to variable myNewNums
+// map does operation on each elements of array and in the end 
+// it returns array to variable myNewNums
 // maps will execute from left one to right one in the end.
