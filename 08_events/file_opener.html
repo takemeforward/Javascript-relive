@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Opener</title>
+</head>
+
+<body>
+    <div class="fileOpener">
+        <input type="file" name="openFile" id="openFile">
+        <button id="openFileButton">Brows...</button>
+    </div>
+
+
+    <script>
+        const inputFile = document.querySelector("#openFile");
+        const inputFileButton = document.querySelector("#openFileButton");
+        inputFile.addEventListener('click', (e) => {
+            // e.preventDefault();
+        })
+        inputFile.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+
+            if (file) {
+                console.log(`You selected ${file.name}`)
+            }
+        })
+
+        inputFileButton.addEventListener('click', (e) => {
+            inputFile.click();
+        })
+    </script>
+</body>
+
+</html>

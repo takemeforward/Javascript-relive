@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Basics</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <button id="print">
+        Print screen
+    </button>
+    <button id="open">Brows..</button>
+
+
+    <script>
+        const images = document.querySelector("#images");
+        // console.log(images);
+        images.addEventListener('click', function (e) {
+            const removeIt = e.target;
+            // if (e.target.tagName === 'IMG') {
+            //     // e.target.style.border = '2px solid red';
+            //     // e.target.style.transform = 'scale(1.2)';
+            //     // e.target.style.transition = 'transform 0.2s';
+
+            //     removeIt.remove();
+            // }
+
+            console.log(e.view.window)
+
+        })
+
+        const print = document.querySelector("#print");
+
+        print.addEventListener('click', (e) => {
+            e.view.window.print();
+        })
+
+        const open = document.querySelector("#open");
+
+        open.addEventListener('click', (e) => {
+            e.view.window.open();
+        })
+    </script>
+</body>
+
+</html>
